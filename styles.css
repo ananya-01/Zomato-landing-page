@@ -1,28 +1,60 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Merriweather', serif;
+    box-sizing: border-box; /* TO use Box Model  */
+  }
+  
+  body {
+    font-family: "Merriweather", serif;
     background-color: #ebf2ff;
-
-}
-.navbar{
+  }
+  
+  .navbar {
     display: flex;
-}
-.navbar_branding{
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+  }
+  
+  .navbar_branding {
     width: 100px;
-}
-.navbar_logo{
+  }
+  
+  .navbar_logo {
     width: 100%;
-}
-.nav_items{
+  }
+  
+  .nav_items {
     background-image: linear-gradient(
-    to right,
-    #ff512f 0%,
-    #dd2476 51%,
-    #ff512f 100%
-  );
-     
-}
+      to right,
+      #ff512f 0%,
+      #dd2476 51%,
+      #ff512f 100%
+    );
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .nav_items:hover {
+    border: 2px solid pink;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar {
+      justify-content: space-between;
+      padding: 2px 30px;
+    }
+  }
+  
+  @media (min-width: 1020px) {
+    .navbar_branding {
+      width: 150px;
+    }
+    .nav_items {
+      padding: 20px;
+      font-size: 20px;
+    }
+  }
