@@ -8,6 +8,27 @@
     font-family: "Merriweather", serif;
     background-color: #ebf2ff;
   }
+  .button_primary{
+    background-image: linear-gradient(
+      to right,
+      #ff512f 0%,
+      #dd2476 51%,
+      #ff512f 100%
+    );
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  /*Nav bar*/
+
+  .container{
+    max-width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  }
   
   .navbar {
     display: flex;
@@ -41,20 +62,204 @@
   .nav_items:hover {
     border: 2px solid pink;
   }
+
+   /*Hero Section*/
+
+  .hero_image_container{
+    width: 100%;
+  }
+  .hero_image{
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0.25);
+  }
+  .hero_text{
+    font-size: 30px;
+    margin: 20px 0;
+  }
+
+   /*Explore Section */
+
+  .explore_menu_text{
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .food_card{
+    background-color: #ffff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
   
+  .food_card_image_container{
+    width: 100%;
+  }
+  .food_image{
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+  .food_card_description{
+    padding: 15px;
+  }
+
+   /*Restaurant List*/
+
+.restaurant_text{
+  font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+  .restaurant_images_container{
+    width: 100%;
+   
+  }
+  .restaurant_images_row_one,.restaurant_images_row_two{
+    width: 100%;
+    display: flex;
+    gap: 3px;
+  }
+  .restaurant_images_row_one{
+    align-items: baseline;
+    margin-bottom: 3px;
+  }
+  .restaurant_image_1,.restaurant_image_4{
+    width: 100%;
+    height: 120px;
+  }
+
+  .restaurant_image_2,.restaurant_image_3{
+  width: 120%;
+  height: 200px;
+}
+.restaurant_1,.restaurant_2,.restaurant_3,.restaurant_4{
+  width: 100%;
+  height: 100%;
+}
+
+/*Update Section*/
+
+.update_text{
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 0;
+  margin-left: 25px;
+  text-align: left;
+  text-decoration: solid;
+}
+.update_email{
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.update{
+  border-style: solid;
+  border-color: blue;
+}
+
+
+ /*Responsive*/
+
   @media (min-width: 768px) {
     .navbar {
       justify-content: space-between;
       padding: 2px 30px;
     }
+    .hero_container{
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+   .explore_menu_lists{
+    margin: 20px;
+     display: flex;
+     gap: 15px;
+    
+   }
+   #pizza_card{
+     margin-top: -20px;
+     margin-bottom: 30px;
+   }
+   .explore_menu_view_more{
+     display: flex;
+     justify-content: center;
+   }
+   .explore_menu_container{
+     position: relative;
+   }
+   .explore_menu_gradient_bg{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+
+     background-image: linear-gradient(
+      to right,
+      #ff512f 0%,
+      #dd2476 51%,
+      #ff512f 100%
+    );
+   
+   transform: skewY(-5deg);
+   z-index: -3;
+   }
+   .restaurant_container{
+     display: flex;
+     align-items: center;
+   }
+   .restaurant_text{
+     width: 100%;
+     font-size: 40px;
+   }
+   .update_email{
+     align-items: center;
+   }
+   .update_text{
+     font-size:35px ;
+     margin-bottom: 0;
+     text-align:left;
+     margin-left: 200px;
+   }
+   .update{
+     padding: 5px;
+     width: 30%;
+   }
   }
   
   @media (min-width: 1020px) {
+    .container{
+      max-width: 900px;
+    }
     .navbar_branding {
       width: 150px;
     }
-    .nav_items {
+    .button_primary {
       padding: 20px;
       font-size: 20px;
+    }
+    .hero_description{
+      width: 100%;
+    }
+    .hero_text{
+      font-size: 50px;
+    }
+  
+  .explore_menu_lists{
+    gap: 40px;
+  }
+  .explore_menu_text{
+    font-size: 50px;
+  }
+  .update_text{
+    margin-left: 28%;
+   
+  }
+}
+  @media (min-width: 1400px){
+    .container{
+      max-width: 1250px;
     }
   }
